@@ -1,4 +1,5 @@
 import * as APIUtil from '../utils/tweets_api_utils'
+// import { fetchTweets } from '../utils/tweets_api_utils';
 
 export const RECEIVE_TWEETS = 'RECEIVE_TWEETS';
 export const RECEIVE_TWEET_ERRORS = 'RECEIVE_TWEET_ERRORS'
@@ -13,8 +14,8 @@ const receiveTweetErrors = errors => ({
   errors
 })
 
-export const fetchTweets = () => dispatch => {
-  return APIUtil.fetchTweets().then(
+export const fetchTweets = (tweets) => dispatch => {
+  return APIUtil.fetchTweets(tweets).then(
     tweets => dispatch(receiveTweets(tweets)),
     errors => dispatch(receiveTweetErrors(errors.responseJSON))
   );
