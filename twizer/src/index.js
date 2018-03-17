@@ -9,8 +9,7 @@ import Root from './components/root'
 
 document.addEventListener('DOMContentLoaded', () => {
   let store = configureStore()
-  console.log('STORE: ',store)
-
+  
   window.store = store;
   window.fetchTweets = fetchTweets
 
