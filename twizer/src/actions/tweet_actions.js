@@ -14,9 +14,9 @@ const receiveTweetErrors = errors => ({
   errors
 })
 
-export const fetchTweets = (tweets) => dispatch => {
-  return APIUtil.fetchTweets(tweets).then(
-    tweets => dispatch(receiveTweets(tweets)),
+export const fetchTweets = (screen_name) => dispatch => {
+  return APIUtil.fetchTweets(screen_name).then(
+    tweets => dispatch(receiveTweets(tweets.data)),
     errors => dispatch(receiveTweetErrors(errors.responseJSON))
   );
 }
