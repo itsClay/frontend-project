@@ -4,9 +4,10 @@ class TweetsIndex extends React.Component {
 
   componentWillMount() {
     this.props.fetchTweets('Trizic');
-    console.log(this.props)
+    this.props.fetchTweets('laughingsquid')
+    this.props.fetchTweets('techcrunch')
+    // console.log(this.props)
   }
-
 
   render() {
     return (
@@ -14,6 +15,7 @@ class TweetsIndex extends React.Component {
       </h2>
     )
   }
+
 }
 
-export default TweetsIndex
+export default TweetsIndex;
