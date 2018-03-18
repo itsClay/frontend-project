@@ -1,0 +1,27 @@
+.EditSidebar {
+  position: absolute;
+  right: -20%;
+  top: 0;
+  z-index: 1;
+  border-left: 1px solid black;
+  background-color: white;
+  height: 100%;
+  width: 20%;
+  -webkit-transition: right 1s;
+  -moz-transition: right 1s;
+  transition: right 1s;
+} 
+.open {
+  -webkit-transition: right 1s;
+  -moz-transition: right 1s;
+  transition: right 1s;
+  right: 0;
+}
+
+.EditSidebar__toggle {
+  position: absolute;
+  left: -2.5em;
+  top: 1em;
+  cursor: pointer;
+}
+
