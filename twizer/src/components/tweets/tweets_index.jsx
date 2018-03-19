@@ -8,10 +8,10 @@ class TweetsIndex extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-
       isLoading: true
     }
     this.formateDate = this.formatDate.bind(this);
+    this.formatColumn = this.formatColumn.bind(this);
   }
 
   componentWillMount() {
@@ -28,6 +28,18 @@ class TweetsIndex extends React.Component {
   formatDate(twitterDate) {
     return Moment(twitterDate).fromNow()
   }
+
+  formatColumn() {
+    // finding our column settings on localStorage since this will
+    // replace our traditional store for settings items.
+    let newCol = '1'
+    let storage = JSON.parse(window.localStorage.getItem('settings'))
+    if (storage.settings !== undefined) {
+      newCol = storage.settings.columns
+    }
+    return `col-${newCol}`
+  }
+
 
   render() {
     if(this.state.isLoading) {
@@ -52,6 +64,7 @@ class TweetsIndex extends React.Component {
                   tweet.entities.urls[0] === undefined ? "https://twitter/com" : tweet.entities.urls[0].url 
                 } 
                 username={tweet.user.screen_name}
+                extraClass={this.formatColumn()}
               />
             ))
           }
