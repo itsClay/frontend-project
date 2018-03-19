@@ -1,0 +1,9 @@
+body, article, {
+  background-color: #14171A;
+  color: white;
+}
+
+.TweetsIndex__Header, .TweetCard__Header, .EditSidebar,  {
+  background-color: #243447;
+  color: white;
+}
