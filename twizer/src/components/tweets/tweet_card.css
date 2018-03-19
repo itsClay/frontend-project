@@ -1,12 +1,24 @@
 .TweetCard {
   background-color: white;
-  /* width: 33%; */
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  flex: 1 0 25%;
+  flex: 1 1 25%;
   margin: 0 .2em .2em .2em;
-  min-width: 300px;
-  max-width: 500px;
+  min-width: 200px;
+}
+
+.col-1 {
+  flex: 1 1 100%;
+}
+.col-2 {
+  flex: 1 1 50%;
+}
+.col-3 {
+  flex: 1 1 33%;
+}
+.col-4 {
+  flex: 1 1 25%;
 }
 
 .TweetCard * {
@@ -18,7 +30,7 @@
   padding: .3em;
   justify-content: flex-start;
   height: 1.1em;
-  background: #e8f4fb;
+  background-color: #e8f4fb;
   border-top: 1px solid #e6ecf0;
   border-bottom: 1px solid #e6ecf0;
   padding-top: .5em;
@@ -31,9 +43,10 @@
 }
 
 .TweetCard__content {
-  box-sizing: border-box;
   font-size: 1em;
   margin: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .TweetCard__link {
   font-size: .7em;
@@ -43,12 +56,11 @@
   text-overflow: ellipsis;
 }
 .TweetCard__created_at {
-  font-size: .9em;
+  font-size: .8em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .TweetCard__username {
   font-size: 1.1em;
-
 }
