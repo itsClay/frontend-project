@@ -1,6 +1,6 @@
 
 ### Setting up API keys
-You will need to insert your dev keys in order to 
+You will need to insert your dev keys in order to use the app on dev.
 ``` bash
         ├── src
         │   ├── App.css
